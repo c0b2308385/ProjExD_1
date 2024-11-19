@@ -33,7 +33,7 @@ def main():
             ko_rct.move_ip((+1,0))
             #screen.blit
         else:
-            ko_rct.move_ip((-1,0))
+            ko_rct.move_ip((-1,))
         
 
         
