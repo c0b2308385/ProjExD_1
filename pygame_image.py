@@ -17,10 +17,10 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-        back_x = (back_x - 2 ) % 1600
+        back_x = tmr % 800
 
-        screen.blit(bg_img, [back_x, 0])
-        screen.blit(bg_img, [back_x - 1600, 0])
+        screen.blit(bg_img, [-back_x, 0])
+        #screen.blit(bg_img, [back_x - 1600, 0])
         screen.blit(ko_img,[300,200])
         pg.display.update()
         tmr += 1        
