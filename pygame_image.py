@@ -22,18 +22,21 @@ def main():
             if event.type == pg.QUIT: return
         back_x = -(tmr%3200)
 
+        move_x = 0
+        move_y = 0
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
-            ko_rct.move_ip((0,-1))
+            move_y -= 1
         elif key_lst[pg.K_DOWN]:
-            ko_rct.move_ip((0,+1))
+            move_y += 1
         elif key_lst[pg.K_LEFT]:
-            ko_rct.move_ip((-1,0))
+            move_x -= 1
         elif key_lst[pg.K_RIGHT]:
-            ko_rct.move_ip((+1,0))
-            #screen.blit
+            move_x += 1
         else:
-            ko_rct.move_ip((-1,0))
+            move_x -= 1
+        
+        ko_rct.move_ip(move_x,move_y)
         
 
         
