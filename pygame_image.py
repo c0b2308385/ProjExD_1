@@ -25,12 +25,17 @@ def main():
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
             ko_rct.move_ip((0,-1))
-        if key_lst[pg.K_DOWN]:
+        elif key_lst[pg.K_DOWN]:
             ko_rct.move_ip((0,+1))
-        if key_lst[pg.K_LEFT]:
+        elif key_lst[pg.K_LEFT]:
             ko_rct.move_ip((-1,0))
-        if key_lst[pg.K_RIGHT]:
+        elif key_lst[pg.K_RIGHT]:
             ko_rct.move_ip((+1,0))
+            #screen.blit
+        else:
+            ko_rct.move_ip((-1,0))
+        
+
         
         screen.blit(bg_img, [back_x,0])
         screen.blit(bg_img2, [back_x+1600,0])
